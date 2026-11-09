@@ -84,7 +84,7 @@
                 {{ range .Files }}{{ if ne .Name "index.html" }}
                 <tr>
                     <td><a href="{{ .Name }}"><span class="icon">📄</span>{{ .Name }}</a></td>
-                    <td class="size">{{ .Size }} bytes</td>
+                    <td class="size">{{ formatSize .Size }}</td>
                 </tr>
                 {{ end }}{{ end }}
             </tbody>
